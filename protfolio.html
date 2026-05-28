@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jagadeeswari Portfolio</title>
+
+<style>
+
+/* 🌈 CLEAN USER-FRIENDLY THEME */
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+font-family:Arial;
+background: linear-gradient(135deg, #0f172a, #111827, #0b1220);
+color:#e5e7eb;
+color: #e2e8f0;
+line-height:1.7;
+}
+
+/* 🧭 NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+padding:14px;
+display:flex;
+justify-content:center;
+gap:18px;
+z-index:100;
+}
+
+nav a{
+color:#e5e7eb;
+text-decoration:none;
+padding:8px 14px;
+border-radius:8px;
+transition:0.3s;
+font-size:14px;
+}
+nav a:hover{
+background: rgba(56,189,248,0.2);
+color: #38bdf8;
+transform: scale(1.05);
+}
+/* 🏠 SECTIONS */
+section{
+padding:100px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+/* 🎯 HEADINGS */
+h1,h2{
+color:#38bdf8;
+margin-bottom:15px;
+}
+
+/* 🖼 PROFILE */
+.profile-img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #38bdf8;
+margin-bottom:20px;
+}
+
+/* 🔘 BUTTON */
+.btn{
+padding:10px 18px;
+background:#38bdf8;
+border:none;
+color:#0f172a;
+margin:8px;
+text-decoration:none;
+border-radius:10px;
+display:inline-block;
+font-weight:bold;
+}
+
+/* 📦 CARD */
+.card{
+background: rgba(255,255,255,0.06);
+padding: 25px;
+margin: 15px 0;
+border-radius: 15px;
+border: 1px solid rgba(255,255,255,0.08);
+backdrop-filter: blur(10px);
+transition: 0.4s;
+}
+
+.card:hover{
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+border: 1px solid rgba(56,189,248,0.4);
+}
+
+/* 🧩 SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.skills span{
+background:rgba(255,255,255,0.06);
+padding:10px 14px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.1);
+font-size:13px;
+display:flex;
+align-items:center;
+gap:8px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.skills span i{
+color:#38bdf8;
+font-size:14px;
+}
+
+.skills span:hover{
+transform:translateY(-5px);
+background:#38bdf8;
+color:#0f172a;
+box-shadow:0 10px 20px rgba(56,189,248,0.25);
+}
+
+.skills span:hover i{
+color:#0f172a;
+}
+
+/*
+.skills span{
+display:inline-block;
+background:rgba(56,189,248,0.15);
+padding:8px 12px;
+margin:6px;
+border-radius:20px;
+border:1px solid rgba(56,189,248,0.25);
+font-size:13px;
+}
+
+.skills span:hover{
+transform: translateY(-5px) scale(1.05);
+background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+color:#0f172a;
+box-shadow: 0 10px 20px rgba(56,189,248,0.25);
+}*/
+
+
+
+/* 🦶 FOOTER */
+footer{
+text-align:center;
+padding:25px;
+background:rgba(255,255,255,0.04);
+margin-top:30px;
+}
+
+.btn{
+padding:10px 18px;
+background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+border:none;
+color:#0f172a;
+margin:8px;
+text-decoration:none;
+border-radius:10px;
+display:inline-block;
+font-weight:bold;
+transition:0.4s;
+box-shadow: 0 5px 15px rgba(56,189,248,0.2);
+}
+
+.btn:hover{
+transform: translateY(-4px) scale(1.05);
+box-shadow: 0 12px 25px rgba(56,189,248,0.35);
+}
+section{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+.profile-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #38bdf8;
+margin-bottom:15px;
+animation: float 4s ease-in-out infinite;
+transition: 0.4s;
+box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.profile-img:hover{
+transform: scale(1.08);
+box-shadow: 0 20px 40px rgba(56,189,248,0.3);
+}
+
+
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+<a href="#home"><i class="fa fa-house"></i> Home</a>
+<a href="#about"><i class="fa fa-user"></i> About</a>
+<a href="#skills"><i class="fa fa-code"></i> Skills</a>
+<a href="#projects"><i class="fa fa-diagram-project"></i> Projects</a>
+<a href="#internship"><i class="fa fa-briefcase"></i> Internship</a>
+<a href="#education"><i class="fa fa-graduation-cap"></i> Education</a>
+<a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+</nav>
+
+<!-- HOME -->
+<section id="home" style="text-align:center">
+<img src="profile.jpg" alt="Profile" class="profile-img">
+
+
+
+<h1>Hi, I'm Jagadeeswari Suvvari</h1>
+<p>Aspiring Software Engineer | Python | Machine Learning | Problem Solver</p>
+<p>I love building real-world solutions using code and AI </p>
+
+<a class="btn" href="#projects">View Projects</a>
+
+<a class="btn" href="https://github.com/SuvvariJagadeeswari-dev " target="_blank">
+GitHub
+</a>
+
+<a class="btn" href="https://www.linkedin.com/in/suvvari-jagadeeswari-3a8bb627b/" target="_blank">
+LinkedIn
+</a>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>
+I am a Computer Science Engineering student at RGUKT Srikakulam (2022–2026).
+I am passionate about Python, Machine Learning, and solving real-world problems.
+My goal is to become a skilled software engineer and contribute to impactful technology solutions.
+</p>
+
+<p>
+I believe in learning by doing and improving through projects and technical activities.
+</p>
+
+<p>
+Strengths: Problem Solving, Leadership, Teamwork (NSS Volunteer, Coding Club Executive).
+</p>
+</div>
+</section>
+
+<!-- EDUCATION (UPDATED) -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="card">
+<h3>B.Tech (CSE)</h3>
+<p>Rajiv Gandhi University of Knowledge and Technology, Srikakulam, Andhra Pradesh</p>
+<p><b>CGPA / Percentage:</b> 91%</p>
+<p><b>Duration:</b> 2022 – 2026</p>
+</div>
+
+<div class="card">
+<h3>Pre-University Course (PUC)</h3>
+<p>Rajiv Gandhi University of Knowledge and Technology,Srikakulam, Andhra Pradesh</p>
+<p><b>Percentage:</b> 98%</p>
+<p><b>Duration:</b> 2020 – 2022</p>
+</div>
+
+
+</section>
+
+<!-- SKILLS (IMPROVED) -->
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="card skills">
+
+<span><i class="fa-brands fa-python"></i> Python</span>
+<span><i class="fa-solid fa-code"></i> C Programming</span>
+<span><i class="fa-brands fa-java"></i> Core Java</span>
+<span><i class="fa-solid fa-brain"></i> Machine Learning</span>
+<span><i class="fa-solid fa-database"></i> MySQL</span>
+<span><i class="fa-brands fa-html5"></i> HTML5</span>
+<span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+<span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+<span><i class="fa-solid fa-server"></i> DBMS Concepts</span>
+<span><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+
+</div>
+</section>
+
+<!-- PROJECTS (UPDATED) -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Online Payment Fraud Detection</h3>
+
+<p style="color:#38bdf8;font-style:italic;">
+“Turning data into security by detecting fraud before it happens.”
+</p>
+
+<p>
+Machine learning model using Logistic Regression, Decision Tree, and Random Forest to detect fraudulent transactions.
+</p>
+
+<p><b>Tech:</b> Python, Pandas, Sklearn</p>
+
+<p style="font-size:13px;color:#94a3b8;">
+🔍 Goal: Improve transaction safety using intelligent prediction models.
+</p>
+</div>
+
+<div class="card">
+<h3>Editorial Summarization</h3>
+
+<p style="color:#38bdf8;font-style:italic;">
+“Making long news articles simple, smart, and exam-ready.”
+</p>
+
+<p>
+Developed an editorial summarization system using NLP to generate concise summaries of The Hindu articles for government exam aspirants.
+</p>
+
+<p>
+Conducted user survey to improve system and learned preprocessing, tokenization, and NLP techniques.
+</p>
+
+<p style="font-size:13px;color:#94a3b8;">
+🧠 Goal: Help students quickly understand important news content.
+</p>
+</div>
+
+</section>
+
+
+
+<!-- INTERNSHIP (UPDATED) -->
+<section id="internship">
+<h2>Internship</h2>
+
+<div class="card">
+<h3>CleanTech: Waste Management with Transfer Learning (VGG16, Flask)</h3>
+<p><b>Organization:</b> SmartInternz (in collaboration with APSCHE)</p>
+<p><b>Duration:</b> May 2025 – July 2025</p>
+
+<p>
+Developed an AI-based waste classification system using VGG16 and Flask to classify waste into Biodegradable, Recyclable, and Trash.
+Promotes smart and sustainable waste management.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="card">
+<p>Email: suvvarijagadeeswari599@gmail.com</p>
+<p>Phone: +91-6302825863</p>
+<p>Location: Andhra Pradesh, India</p>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p> Learning, Building, and Growing Every Day</p>
+</footer>
+
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+sections.forEach(sec => {
+const top = window.scrollY;
+const offset = sec.offsetTop - 300;
+
+if(top > offset){
+sec.classList.add("show");
+}
+});
+});
+</script>
+
+
+</body>
+</html>
